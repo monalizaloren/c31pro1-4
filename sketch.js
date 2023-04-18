@@ -68,30 +68,7 @@ function showCannonBalls(ball, index) {
  
 
     function showBoats() {
-      if (boats.length > 0) {
-        if (
-          boats.length < 4 &&
-          boats[boats.length - 1].body.position.x < width - 300
-        ) {
-          var positions = [-130, -100, -120, -80];
-          var position = random(positions);
-          var boat = new Boat(width,height - 100, 200, 200, position);
-          boats.push(boat);
-        }
-    
-        for (var i = 0; i < boats.length; i++) {
-          Matter.Body.setVelocity(boats[i].body, {
-            x: -0.9,
-            y: 0
-          });
-    
-          boats[i].display();
-        }
-      } else {
-        var boat = new Boat(width, height - 100, 200, 200, -100);
-        boats.push(boat);
-      }
-    }
+   
 function keyReleased() {
   if (keyCode === DOWN_ARROW) { 
     balls[balls.length - 1].shoot();
